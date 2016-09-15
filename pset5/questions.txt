@@ -1,0 +1,24 @@
+0.  Its a long word that means a lung disease caused by inhaling very fine ash and sand dust.
+1.  It returns resource usage measures for one of the following:
+    a) The calling process, which is the sum of resources used by all threads in the process.
+    b) All children of the calling process that have terminated and been waited for. 
+    c) The calling thread.
+2.  16 in total
+3.  We pass the reference or address of these values so that we dont make a copy of the values held by before and after when we are in the function.
+4.  For loop reads a file character in every iteration. Now if the char is an alphabet or an apostrophe its appened to the word string,
+    If its a number, the whole word is ignored, else if it is any other char, it indicates the end of word so word is ended by 
+    appending '\0'  nul terminator at the end of the word and the word formed if checked for spelling errors by passing it as an
+    arguement to the check function. If the check function returns false, it means the word is misspelled in which case the misspelled 
+    counter is incremented and the misspelled word is printed on a new line. This is dont till the end of file (EOF) char is detetcted. 
+5.  Performance will be affected. Code will be slowed considerably because of an extra loop to get characters from the word.
+6.  By declaring dictionary and word as const we are making sure that their values aren't to be modified during the program runtime. 
+7.  Trie DS is used to implement the spell checker because of its optimal checking and loading time.
+    Every Trie node has 2 elements
+    1) bool : is_word - to signify if this node denotes end of a word
+    2) node* :children[27] - 27 pointers to node for going to the node of next letter. (26 for letters 1 for ')
+    for every word of length m
+    load time is O(m), check time is O(m)
+8.  Took 0.20 secs at first, did changes in unload and load function to decrease the running time.
+9.  Was using fscanf to get each word and then implemented a loop inside to get each char, insted used fgetc to get each 
+    char from the file, and performance improved considerably 
+10. Yes, load function can be improved.

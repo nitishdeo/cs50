@@ -1,0 +1,9 @@
+questions.txt
+
+Computer Science 50
+Problem Set 3
+
+0. The size of board can be nxn where (n <=9 && n>=3)
+1. The game board is represented by a 2 dimentional array
+2. greet()
+3. init(), draw(), move(), won() 
